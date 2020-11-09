@@ -27,4 +27,7 @@ However, due to time constraints, the menu shown at the end of the game is only 
 
 - Week 10: Feat: finish the game-over menu & draw the effect of the player being hit by a bullet. Test: code Review.  
 - Week 11: Feat: the game difficulty level up & the Main menu interface of this game (including game start, help, Rank board, and quit game). Test: code Review.
-- Week 12: Feat: integrate the Main menu interface and gaming interface & Make the interface more attractive. Test: code Review.
+- Week 12: Feat: integrate the Main menu interface and gaming interface & Make the interface more attractive. Test: code Review.  
+
+## My Github
+More details are available at: [Rolling Ball at Github 18372324](https://github.com/18372324/RollingBall)  
