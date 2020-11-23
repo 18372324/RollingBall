@@ -57,7 +57,7 @@ public class BallThread extends Thread{
                 gameView.ball.curr_x = gameView.ball.curr_x + dx;
             }
             //Determine whether the Y direction hits the wall, if it hits the wall, restore
-            if(gameView.ball.curr_y + dy >= gameView.bm_topBar.getHeight() + gameView.bm_turret.getHeight() &&
+            if(gameView.ball.curr_y + dy >= gameView.top &&
                     gameView.ball.curr_y + dy <= gameView.getHeight() - gameView.ball.height){
                 gameView.ball.curr_y = gameView.ball.curr_y + dy;
             }

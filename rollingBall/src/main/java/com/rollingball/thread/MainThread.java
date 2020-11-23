@@ -3,20 +3,17 @@ package com.rollingball.thread;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
-import com.rollingball.view.GameView;
+import com.rollingball.view.MainView;
 
-/**
- * this class just do one thing ---- draw the images one frame by one frame
- */
-public class DrawThread extends Thread {
+public class MainThread extends Thread {
     public boolean flag = true;
-    boolean isPause = false;
-    GameView gameView;
+    public boolean isPause = false;
+    MainView mainView;
     SurfaceHolder surfaceHolder;
 
-    public DrawThread(GameView gameView){
-        this.gameView = gameView;
-        this.surfaceHolder = gameView.getHolder();
+    public MainThread(MainView mainView){
+        this.mainView = mainView;
+        this.surfaceHolder = mainView.getHolder();
     }
 
     /**
@@ -58,7 +55,7 @@ public class DrawThread extends Thread {
                     // lock the whole canvas to draw
                     c = this.surfaceHolder.lockCanvas(null);
                     synchronized (this.surfaceHolder) {
-                        gameView.onMyDraw(c);//绘制
+                        mainView.onMyDraw(c);//绘制
                     }
                 } finally {
                     if (c != null) {
@@ -71,16 +68,6 @@ public class DrawThread extends Thread {
             try{
                 //the higher the frame rate, the smoother the animation
                 Thread.sleep(12);
-                if(gameView.countdown - 40 > 0)gameView.countdown -= 40;
-                else if(gameView.countdown > 0){
-                    gameView.countdown = 0;
-                    gameView.bulletThread.start();
-                    gameView.ballThread.start();
-                }
-                if(gameView.promptTime - 40 > 0)gameView.promptTime -= 40;
-                else if(gameView.promptTime > 0){
-                    gameView.promptTime = 0;
-                }
             }
             catch(Exception e){
                 e.printStackTrace();

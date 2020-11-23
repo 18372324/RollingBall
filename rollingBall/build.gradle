@@ -35,4 +35,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    def htextview_version = "0.1.6"
+    implementation "com.hanks:htextview-base:$htextview_version"
+    implementation "com.hanks:htextview-rainbow:$htextview_version"
+
 }
