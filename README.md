@@ -72,8 +72,9 @@ However, due to time constraints, the menu shown at the end of the game is only 
 - To simplify, I consider the player ball as a 2D bounding box, which means that the collision is only detected by the four corners of the box. As a result of this, players who are moving on the boundary feel the wall is very rough and hard to move.
 
 ## Reference
-* Some the images are available at: http://box.ptpress.com.cn/y/978-7-115-47555-8
-* Others are drawn by myself
+- The rainbow textview is available at: https://github.com/hanks-zyh/HTextView
+- Some the images are available at: http://box.ptpress.com.cn/y/978-7-115-47555-8
+- Others are drawn by myself
 
 ## My Github
 More details are available at: [Rolling Ball at Github 18372324](https://github.com/18372324/RollingBall)  
